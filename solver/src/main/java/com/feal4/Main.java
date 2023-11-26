@@ -89,12 +89,8 @@ public class Main {
         int y2 = BitManipulation.f(FEAL4.L0^FEAL4.R0^y1^key2);
         int y3 = BitManipulation.f(FEAL4.L0^y0^y2^key3);
 
-        key0 = Integer.reverseBytes(key0);
-        key1 = Integer.reverseBytes(key1);
-        key2 = Integer.reverseBytes(key2);
-        key3 = Integer.reverseBytes(key3);
-        int key4 = Integer.reverseBytes(FEAL4.L0^FEAL4.R0^y1^y3^FEAL4.L4);
-        int key5 = Integer.reverseBytes(FEAL4.R0^y1^y3^y0^y2^FEAL4.R4);
+        int key4 = FEAL4.L0^FEAL4.R0^y1^y3^FEAL4.L4;
+        int key5 = FEAL4.R0^y1^y3^y0^y2^FEAL4.R4;
 
         int[] key = {key0, key1, key2, key3, key4, key5};
         byte[] data = new byte[8];

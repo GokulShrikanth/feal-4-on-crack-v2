@@ -7,7 +7,7 @@ public class BitManipulation {
     }
 
     public static int f(int num) {
-        return Integer.reverseBytes(FealProgram.f(Integer.reverseBytes(num)));
+        return (FealProgram.f((num)));
     }
 
     public static int generate12BitKeyForInnerBytes(int k) {

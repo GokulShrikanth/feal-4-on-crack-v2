@@ -15,18 +15,18 @@ public class FealProgram {
         return rot2((byte)((a+b+1)&255));
     }
 
-    static int pack(byte[] b,int startindex) {
+    static int pack(byte[] b,int startIndex) {
        /* pack 4 bytes into a 32-bit Word */
-       return (((b[startindex+3]&255)<<24)|((b[startindex+2]&255)<<16)|((b[startindex+1]&255)<<8)|(b[startindex]&255));
+       return (((b[startIndex+3]&255)<<24)|((b[startIndex+2]&255)<<16)|((b[startIndex+1]&255)<<8)|(b[startIndex]&255));
     }
 
-    static void unpack(int a,byte[] b,int startindex) {
+    static void unpack(int a,byte[] b,int startIndex) {
         /* unpack bytes from a 32-bit word */
 
-        b[startindex]=(byte)a;
-        b[startindex+1]=(byte)(a>>>8);
-        b[startindex+2]=(byte)(a>>>16);
-        b[startindex+3]=(byte)(a>>>24);
+        b[startIndex]=(byte)a;
+        b[startIndex+1]=(byte)(a>>>8);
+        b[startIndex+2]=(byte)(a>>>16);
+        b[startIndex+3]=(byte)(a>>>24);
     }
 
     static int f(int input) {

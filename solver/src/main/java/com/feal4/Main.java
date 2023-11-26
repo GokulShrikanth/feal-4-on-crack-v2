@@ -120,7 +120,7 @@ public class Main {
 
         FEAL4.newObject();
         long currentTimeMillis = System.currentTimeMillis();
-        System.out.println("Starting to decrypt, Time: " + currentTimeMillis + " ms");
+        System.out.println("Starting to decrypt, Current Time in millis: " + currentTimeMillis + " ms");
 
         for(int k1=0; k1<4096; k1++) {
             int key_tilda = BitManipulation.generate12BitKeyForInnerBytes(k1);

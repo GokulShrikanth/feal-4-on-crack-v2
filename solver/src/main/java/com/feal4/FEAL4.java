@@ -17,11 +17,11 @@ public class FEAL4 {
         readText();
     }
 
-    public static void splitPairs(int wordIndex) {
-        L0 = (int) Long.parseLong(plaintext[wordIndex].substring(0,8), 16);
-        R0 = (int) Long.parseLong(plaintext[wordIndex].substring(8), 16);
-        L4 = (int) Long.parseLong(ciphertext[wordIndex].substring(0,8), 16);
-        R4 = (int) Long.parseLong(ciphertext[wordIndex].substring(8), 16);
+    public static void splitPairs(int index) {
+        L0 = (int) Long.parseLong(plaintext[index].substring(0,8), 16);
+        R0 = (int) Long.parseLong(plaintext[index].substring(8), 16);
+        L4 = (int) Long.parseLong(ciphertext[index].substring(0,8), 16);
+        R4 = (int) Long.parseLong(ciphertext[index].substring(8), 16);
     }
 
     public static void readText() {

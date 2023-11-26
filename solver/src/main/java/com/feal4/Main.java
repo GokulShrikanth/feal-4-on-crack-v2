@@ -4,20 +4,20 @@ public class Main {
 
     private static void solveForK1(int key0) {
         for(int k1=0; k1<4096; k1++) {
-            int key_tilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
-            int first_a1 = BitManipulation.calcInnerBytesKey1(0, key_tilda, key0);
+            int keyTilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
+            int firstA1 = BitManipulation.calcInnerBytesKey1(0, keyTilda, key0);
 
             for(int w1=1; w1<FEAL4.count; w1++) {
-                if(first_a1 != BitManipulation.calcInnerBytesKey1(w1, key_tilda,  key0))
+                if(firstA1 != BitManipulation.calcInnerBytesKey1(w1, keyTilda,  key0))
                     break;
 
                 if(w1 == FEAL4.count-1) {
                     for(int k2=0; k2<1048576; k2++) {
-                        int key1 = BitManipulation.generate20BitKeyForOuterBytes(k2, key_tilda);
-                        int first_a2 = BitManipulation.calcOuterBytesKey1(0, key0, key1);
+                        int key1 = BitManipulation.generate20BitKeyForOuterBytes(k2, keyTilda);
+                        int firstA2 = BitManipulation.calcOuterBytesKey1(0, key0, key1);
 
                         for(int w2=1; w2<FEAL4.count; w2++) {
-                            if(first_a2 != BitManipulation.calcOuterBytesKey1(w2, key0, key1))
+                            if(firstA2 != BitManipulation.calcOuterBytesKey1(w2, key0, key1))
                                 break;
 
                             if(w2 == FEAL4.count-1)
@@ -31,20 +31,20 @@ public class Main {
 
     private static void solveForK2(int key0, int key1) {
         for(int k1=0; k1<4096; k1++) {
-            int key_tilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
-            int first_a1 = BitManipulation.calcInnerBytesKey2(0, key_tilda, key0, key1);
+            int keyTilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
+            int firstA1 = BitManipulation.calcInnerBytesKey2(0, keyTilda, key0, key1);
 
             for(int w1=1; w1<FEAL4.count; w1++) {
-                if(first_a1 != BitManipulation.calcInnerBytesKey2(w1, key_tilda,  key0, key1))
+                if(firstA1 != BitManipulation.calcInnerBytesKey2(w1, keyTilda,  key0, key1))
                     break;
 
                 if(w1 == FEAL4.count-1) {
                     for(int k2=0; k2<1048576; k2++) {
-                        int key2 = BitManipulation.generate20BitKeyForOuterBytes(k2, key_tilda);
-                        int first_a2 = BitManipulation.calcOuterBytesKey2(0, key0, key1, key2);
+                        int key2 = BitManipulation.generate20BitKeyForOuterBytes(k2, keyTilda);
+                        int firstA2 = BitManipulation.calcOuterBytesKey2(0, key0, key1, key2);
 
                         for(int w2=1; w2<FEAL4.count; w2++) {
-                            if(first_a2 != BitManipulation.calcOuterBytesKey2(w2, key0, key1, key2))
+                            if(firstA2 != BitManipulation.calcOuterBytesKey2(w2, key0, key1, key2))
                                 break;
 
                             if(w2 == FEAL4.count-1)
@@ -58,20 +58,20 @@ public class Main {
 
     private static void solveForK3(int key0, int key1, int key2) {
         for(int k1=0; k1<4096; k1++) {
-            int key_tilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
-            int first_a1 = BitManipulation.calcInnerBytesKey3(0, key_tilda, key0, key1, key2);
+            int keyTilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
+            int firstA1 = BitManipulation.calcInnerBytesKey3(0, keyTilda, key0, key1, key2);
 
             for(int w1=1; w1<FEAL4.count; w1++) {
-                if(first_a1 != BitManipulation.calcInnerBytesKey3(w1, key_tilda,  key0, key1, key2))
+                if(firstA1 != BitManipulation.calcInnerBytesKey3(w1, keyTilda,  key0, key1, key2))
                     break;
 
                 if(w1 == FEAL4.count-1) {
                     for(int k2=0; k2<1048576; k2++) {
-                        int key3 = BitManipulation.generate20BitKeyForOuterBytes(k2, key_tilda);
-                        int first_a2 = BitManipulation.calcOuterBytesKey3(0, key0, key1, key2, key3);
+                        int key3 = BitManipulation.generate20BitKeyForOuterBytes(k2, keyTilda);
+                        int firstA2 = BitManipulation.calcOuterBytesKey3(0, key0, key1, key2, key3);
 
                         for(int w2=1; w2<FEAL4.count; w2++) {
-                            if(first_a2 != BitManipulation.calcOuterBytesKey3(w2, key0, key1, key2, key3))
+                            if(firstA2 != BitManipulation.calcOuterBytesKey3(w2, key0, key1, key2, key3))
                                 break;
 
                             if(w2 == FEAL4.count-1)
@@ -119,20 +119,20 @@ public class Main {
         System.out.println("Starting to decrypt, Current Time in millis: " + currentTimeMillis + " ms");
 
         for(int k1=0; k1<4096; k1++) {
-            int key_tilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
-            int first_a1 = BitManipulation.calcInnerBytesKey0(0, key_tilda);
+            int keyTilda = BitManipulation.generate12BitKeyForInnerBytes(k1);
+            int firstA1 = BitManipulation.calcInnerBytesKey0(0, keyTilda);
 
             for(int w1=1; w1<FEAL4.count; w1++) {
-                if(first_a1 != BitManipulation.calcInnerBytesKey0(w1, key_tilda))
+                if(firstA1 != BitManipulation.calcInnerBytesKey0(w1, keyTilda))
                     break;
 
                 if(w1 == FEAL4.count-1) {
                     for(int k2=0; k2<1048576; k2++) {
-                        int key0 = BitManipulation.generate20BitKeyForOuterBytes(k2, key_tilda);
-                        int first_a2 = BitManipulation.calcOuterBytesKey0(0, key0);
+                        int key0 = BitManipulation.generate20BitKeyForOuterBytes(k2, keyTilda);
+                        int firstA2 = BitManipulation.calcOuterBytesKey0(0, key0);
 
                         for(int w2=1; w2<FEAL4.count; w2++) {
-                            if(first_a2 != BitManipulation.calcOuterBytesKey0(w2, key0))
+                            if(firstA2 != BitManipulation.calcOuterBytesKey0(w2, key0))
                                 break;
 
                             if(w2 == FEAL4.count-1)
